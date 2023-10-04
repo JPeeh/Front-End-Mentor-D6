@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+p{
+    font-size: .98em;
+}
+
+main{
+    background-color: white;
+    margin: 2rem;
+    max-width: 375px;
+    min-width: 260px;
+    border-radius: 10px;
+}
+
+.col{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.image{
+    background-image: url(./images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 265px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.container_content{
+    padding: 1.5rem;
+}
+
+.container_content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container_content h2{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: .8rem;
+    color: hsl(228, 12%, 48%);
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+.container_main_tittle{
+    line-height: 1;
+}
+
+.container_content h1{
+    font-size: 2.3rem;
+    font-family: Fraunces;
+    font-weight: 700;
+}
+
+.container_content p{
+    font-family: Montserrat;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.6;
+}
+
+.container_content h3{
+    color: hsl(158, 36%, 37%);
+    font-size: 2rem;
+    font-family: Fraunces;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container_content .price_cancel{
+    color: hsl(228, 12%, 48%);
+    font-size: .9rem;
+    font-family: Montserrat;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+button{
+    padding: 1rem;
+    font-family: montserrat;
+    font-weight: 700;
+    color: white;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 9px;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.icon_before::before{
+    content: url(./images/icon-cart.svg);
+    margin-right: 10px;
+    position: absolute;
+    transform: scale(1.2) translate(-24px, 1px);
+}
+
+button:hover{
+    background-color: hsl(158, 38%, 23%);
+}
+
+@media screen and (min-width: 768px) {
+
+    main{
+        display: flex;
+        flex-direction: row;
+        max-width: 650px;
+    }
+
+    .image{
+        background-image: url(./images/image-product-desktop.jpg);
+        background-size: cover;
+        background-position: left top;
+        height: 100%;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .col{
+        width: 50%;
+    }
+
+    .col-6-lg{
+        width: 50%;
+    }
+
+    .container_content{
+        gap: 1.5rem ;
+        padding: 2.3rem 2rem;
+        justify-content: space-between;
+    }
+    
+}
+
+
+
