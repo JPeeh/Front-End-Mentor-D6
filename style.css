@@ -20,7 +20,6 @@ main{
     background-color: white;
     margin: 2rem;
     max-width: 375px;
-    min-width: 260px;
     border-radius: 10px;
 }
 
@@ -30,12 +29,20 @@ main{
 }
 
 .image{
-    background-image: url(./images/image-product-mobile.jpg);
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 265px;
     border-radius: 10px 10px 0px 0px;
+}
+
+.image .img_mobile{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.image .img_desktop{
+    display: none;
 }
 
 .container_content{
@@ -122,12 +129,21 @@ button:hover{
         max-width: 650px;
     }
 
+    .img_mobile{
+        display: none;
+    }
+
     .image{
-        background-image: url(./images/image-product-desktop.jpg);
-        background-size: cover;
-        background-position: left top;
         height: 100%;
+    }
+
+    .image .img_desktop{
+        width: 100%;
+        background-size: cover;
+        background-position: center;
         border-radius: 10px 0px 0px 10px;
+        display: block;
+        height: 100%;
     }
 
     .col{
